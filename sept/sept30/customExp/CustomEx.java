@@ -19,6 +19,12 @@ class InsufficientFundsException extends Exception{
 
 }
 
+class AccountErrorException extends Exception{
+    AccountErrorException(String e){
+        super(e);
+    }
+}
+
 
 class BankAccount{
     private double balance;
