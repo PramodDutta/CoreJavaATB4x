@@ -1,15 +1,16 @@
 package oct.oct7;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class AL001 {
     public static void main(String[] args) {
         List<String> l = new ArrayList();
         l.add("pramod");
         l.add("dutta");
+        l.add("autta");
+
+        Collections.sort(l);
+
 
         Iterator i = l.iterator();
         while(i.hasNext()){
