@@ -1,8 +1,6 @@
 package oct.oct7.setdemo;
 
-import java.util.Comparator;
-
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student2>{
     private String name;
     private Integer age;
 
@@ -58,11 +56,11 @@ public class Student implements Comparable<Student>{
 //    }
 
     @Override
-    public int compareTo(Student o)
+    public int compareTo(Student2 o)
     {  // s1.id  - s2.id => 0
      // s1.id  > s2.id => ASC
         // s1.id  > s2.id => DSC
-        return this.name.compareTo(o.name);
+        return this.getName().compareTo(o.getName());
     }
 
 
@@ -70,23 +68,6 @@ public class Student implements Comparable<Student>{
 }
 
 
-class  SortById implements Comparator<Student>{
-
-    @Override
-    public int compare(Student o1, Student o2) {
-        return o1.getId().compareTo(o2.getId());
-    }
-}
-
-
-class SordByName implements Comparator<Student>{
-
-    @Override
-    public int compare(Student o1, Student o2) {
-        return o1.getName().compareTo(o2.getName());
-    }
-
-}
 
 
 

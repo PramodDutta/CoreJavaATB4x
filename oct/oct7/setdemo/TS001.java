@@ -8,7 +8,7 @@ public class TS001 {
     public static void main(String[] args) {
         Set<Student> studentSet = new TreeSet();
         Student s1 = new Student("Pramod",34,1);
-        Student s2 = new Student("Dramod",34,1);
+        Student s2 = new Student("Dramod",34,3);
         Student s3 = new Student("Lucky",34,2);
 
         // Comparable -> id or name or age - > id and name ? Not possible
@@ -19,9 +19,14 @@ public class TS001 {
         studentSet.add(s2);
         studentSet.add(s3);
 
-        List studentList = studentSet.stream().toList();
 
-        Collections.sort(studentList,new SordByName());
+        TreeSet<Student> studentSetByAge = new TreeSet<>(Comparator.comparingInt(Student::getId));
+
+        System.out.println("\nStudents (Sorted by Age):");
+        for (Student student : studentSetByAge) {
+            System.out.println(student);
+        }
+
 
 
         // How I have to sort the S1 AND S2?
